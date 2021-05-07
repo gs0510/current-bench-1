@@ -31,8 +31,6 @@ jobs:
         with:
           ocaml-version: ${{ matrix.ocaml-version }}
 
-      - run: cd pipeline
+      - run: opam install ./pipeline/ --deps-only --yes --with-test
 
-      - run: opam install . --deps-only --yes --with-test
-
-      - run: opam exec -- dune build
+      - run: opam exec -- dune build ./pipeline/bin/main.exe --profile=release
