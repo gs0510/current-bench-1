@@ -13,6 +13,7 @@ RUN sudo apt-get update && \
     libsqlite3-dev \
     libcapnp-dev
 
+
 WORKDIR /mnt/project
 
 # Build dependencies.
