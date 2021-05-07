@@ -1,0 +1,11 @@
+.build
+build
+dist
+web_modules
+node_modules
+.graphql_ppx_cache
+*.bs.js
+lib/bs
+.DS_Store
+.bsb.lock
+.merlin
