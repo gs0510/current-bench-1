@@ -25,7 +25,9 @@ jobs:
         uses: avsm/setup-ocaml@v1.1.10
         with:
           ocaml-version: ${{ matrix.ocaml-version }}
-    
+
+      - run: apt install -y capnproto graphviz libcapnp-dev
+
       - run: opam install ./pipeline/ --deps-only --yes --with-test
 
       - run: opam exec -- dune build ./pipeline/bin/main.exe --profile=release
